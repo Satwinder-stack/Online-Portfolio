@@ -211,4 +211,7 @@ body {
         background: #0b0d17 url('../images/midnightBackgroundDigitalizedMobile.png') no-repeat center center fixed;
         background-size: cover;
     }
+
+    .footer-meta{
+        margin-top: -1.5em;
 }

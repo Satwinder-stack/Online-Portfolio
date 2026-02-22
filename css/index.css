@@ -178,6 +178,8 @@ body {
         padding: 1.5rem;
         padding-top: 4rem;
         align-items: flex-start;
+        position: relative; /* Context for the absolute button if needed */
+        min-height: 100vh;
     }
 
     .main-title {
@@ -188,20 +190,24 @@ body {
         letter-spacing: 2px;
     }
 
-    .image-wrapper {
-        max-width: 280px;
-    }
-
+    /* Anchor the CTA to the bottom */
     .cta-link {
-        width: 100%;
+        position: fixed; /* Pins it to the screen */
+        bottom: 2rem;    /* Distance from bottom */
+        left: 1.5rem;    /* Align with container padding */
+        right: 1.5rem;   /* Ensures it spans the width */
+        width: calc(100% - 3rem); /* Full width minus side padding */
+        
         justify-content: center;
-        padding: 1rem;
-        background: rgba(0, 212, 255, 0.1);
+        padding: 1.2rem;
+        background: rgba(0, 212, 255, 0.15);
+        backdrop-filter: blur(10px); /* Optional: makes it pop against background */
         border: 1px solid var(--accent-color);
-        border-radius: 4px;
+        border-radius: 8px;
+        z-index: 100;    /* Keep it above other elements */
     }
 
-    body{
+    body {
         background: #0b0d17 url('../images/midnightBackgroundDigitalizedMobile.png') no-repeat center center fixed;
         background-size: cover;
     }
